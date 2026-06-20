@@ -7,7 +7,7 @@ spring:
   cloud:
     gateway:
       server:
-        webflux:
+        webmvc:
           routes:
             - id: auth-path
               uri: lb://AUTH-SERVICE
