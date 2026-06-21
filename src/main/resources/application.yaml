@@ -40,11 +40,11 @@ spring:
             - id: support-path
               uri: lb://SUPPORT-SERVICE
               predicates:
-                - Path=/support,/support/**
+                - Path=/tickets,/tickets/**
             - id: report-path
               uri: lb://REPORT-SERVICE
               predicates:
-                - Path=/report,/report/**
+                - Path=/reportes,/reportes/**
 
 eureka:
   client:
