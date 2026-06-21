@@ -16,7 +16,7 @@ spring:
             - id: user-path
               uri: lb://USER-SERVICE
               predicates:
-                - Path=/users,/users/**
+                - Path=/user,/user/**
             - id: agenda-path
               uri: lb://AGENDA-SERVICE
               predicates:
@@ -33,10 +33,18 @@ spring:
               uri: lb://SHIPPING-SERVICE
               predicates:
                 - Path=/shipping,/shipping/**
-            - id: notifications-path
-              uri: lb://NOTIFICATIONS-SERVICE
+            - id: cart-path
+              uri: lb://CART-SERVICE
               predicates:
-                - Path=/notifications,/notifications/**
+                - Path=/cart,/cart/**
+            - id: support-path
+              uri: lb://SUPPORT-SERVICE
+              predicates:
+                - Path=/support,/support/**
+            - id: report-path
+              uri: lb://REPORT-SERVICE
+              predicates:
+                - Path=/report,/report/**
 
 eureka:
   client:
